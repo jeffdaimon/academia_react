@@ -1,0 +1,44 @@
+html, body, div{
+    background-color: #ebeff0;
+}
+
+.alinhamentoMeio{
+    text-align: center;
+    font-weight: bold;
+}
+.alinhamentoDireita{
+    float: right;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.marginButton{
+    margin: 10px;
+}
+
+.form-control{
+    display: inline;
+}
+
+.buttonForm{
+    float: left;
+}
+
+.buttonVoltar{
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+
+label{
+    width: 70px;
+}
+
+.labelContrato{
+    display: inline;
+}
+
+.logo{
+    height: 400px;
+}
