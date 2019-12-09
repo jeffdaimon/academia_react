@@ -3,7 +3,6 @@ import React from 'react';
 import axios from 'axios';
 import ClienteForm from './ClienteForm';
 import ClienteTable from './ClienteTable';
-import MenuView from '../Menu/MenuView';
 import { Link } from 'react-router-dom';
 
 export default class ClienteView extends React.Component {

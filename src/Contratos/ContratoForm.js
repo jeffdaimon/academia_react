@@ -74,7 +74,7 @@ export default class ContratoForm extends React.Component {
              <br/>
             <h2>Cadastro de contratos</h2>
             <br />
-            <label className="marginButton labelContrato">Meio de pagamento:</label>
+            <label className="marginButton labelContrato">Meio de pagamento: *</label>
             <br/>
             <input className="form-control w-25" placeholder="Exemplo: Dinheiro"
             value={this.state.meioPagamento}
@@ -83,7 +83,7 @@ export default class ContratoForm extends React.Component {
                 })}
             />
             <br /><br />
-            <label className="marginButton labelContrato">Tempo de contrato:</label>
+            <label className="marginButton labelContrato">Tempo de contrato: *</label>
             <br/>
             <input className="form-control w-25" placeholder="Exemplo: 1 mês"
                 value={this.state.tempoContrato}
@@ -92,7 +92,7 @@ export default class ContratoForm extends React.Component {
                 })}
             />
             <br /><br />
-            <label className="marginButton labelContrato">Selecione um cliente:</label>
+            <label className="marginButton labelContrato">Selecione um cliente: *</label>
             <br/>
             <select className="form-control w-25" value={this.state.clienteId} 
             onChange={ (clientes) => this.setState({ clienteId: clientes.target.value
@@ -104,7 +104,7 @@ export default class ContratoForm extends React.Component {
                     )}
             </select>
             <br/><br/>
-            <label className="marginButton labelContrato">Selecione um plano:</label>
+            <label className="marginButton labelContrato">Selecione um plano: *</label>
             <br/>
             <select className="form-control w-25" value={this.state.planoId}
                 onChange={(plano) => this.setState({ planoId: plano.target.value
@@ -117,9 +117,11 @@ export default class ContratoForm extends React.Component {
             </select>
 
             <br></br>
-
+            <p className="alinhamentoDireita">* Todos os campos obrigatórios</p>
+            <br /><br />
             <button className="btn btn-primary"
-                disabled={this.state.valor < 0}
+                disabled={this.state.meioPagamento == null || this.state.meioPagamento == ""}
+                disabled={this.state.tempoContrato == null || this.state.tempoContrato == ""}
                 onClick={() => this.confirmar()}
             >{this.props.editar ? "Confirmar" : "Cadastrar"}</button>
             <button className="btn btn-primary marginButton"

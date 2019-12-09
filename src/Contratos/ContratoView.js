@@ -3,7 +3,6 @@ import React from 'react';
 import axios from 'axios';
 import ContratoForm from './ContratoForm';
 import ContratoTable from './ContratoTable';
-import MenuView from '../Menu/MenuView';
 import { Link } from 'react-router-dom';
 
 export default class ContratoView extends React.Component {
